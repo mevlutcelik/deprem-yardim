@@ -13,16 +13,33 @@ date_default_timezone_set("Europe/Istanbul");
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
     <style>
-        #myTable_wrapper{
-            margin:3rem;
-        }
         .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate{
-            font-size: 12px;
-            color: #4e5d78;
+            font-size: 12px !important;
+            color: #657a9f !important;
+        }
+        .dataTables_wrapper .dataTables_length select{
+            border-radius: 0.5rem !important;
+            border-color: #454450 !important;
+            color: #fff !important;
+        }
+        .dataTables_wrapper .dataTables_length option{
+            background: #454450 !important;
+        }
+        .dataTables_wrapper .dataTables_filter input {
+            border-radius: 0.5rem !important;
+            border-color: #454450 !important;
+            outline: 0 !important;
+            color: #fff !important;
+        }
+        table.dataTable thead>tr>th.sorting, table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_desc, table.dataTable thead>tr>th.sorting_asc_disabled, table.dataTable thead>tr>th.sorting_desc_disabled, table.dataTable thead>tr>td.sorting, table.dataTable thead>tr>td.sorting_asc, table.dataTable thead>tr>td.sorting_desc, table.dataTable thead>tr>td.sorting_asc_disabled, table.dataTable thead>tr>td.sorting_desc_disabled{
+            font-size: 12px !important;
+        }
+        table.dataTable tbody th, table.dataTable tbody td{
+            font-size: 12px !important;
         }
     </style>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
 </head>
 
 <body>
@@ -31,7 +48,7 @@ date_default_timezone_set("Europe/Istanbul");
 
 <div class="container my-5">
     <section>
-        <div class="container bg-dark py-5">
+        <div class="container bg-dark py-5" style="overflow-x: auto;">
             <div class="row">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
                     <h2 class="fw-bold text-success mb-2">Enkaz Altında Kalan Kişilerin Konumları</h2>
@@ -115,15 +132,27 @@ date_default_timezone_set("Europe/Istanbul");
                 loadingRecords: "Yükleniyor...",
                 search: "Kayıt ara...",
                 paginate: {
-                    first:      "İlk",
-                    last:       "Son",
-                    next:       "Sonraki",
-                    previous:   "Önceki"
+                    first: "İlk",
+                    last: "Son",
+                    next: "Sonraki",
+                    previous: "Önceki"
                 },
+                zeroRecords: "Sonuç bulunamadı!",
+                infoFiltered: "(_MAX_ kayıt içerisinde filtrelendi)",
             }
         });
     } );
 </script>
+<style>
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+        background-color: #06a0b2 !important;
+        border-radius: 0.5rem !important;
+        color: #fff !important;
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+        color: #fff;
+    }
+</style>
 </body>
 
 </html>
