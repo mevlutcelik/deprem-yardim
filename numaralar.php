@@ -34,10 +34,6 @@ $get_ip_address = getIP();
           href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
     <style>
-        #myTable_wrapper {
-            margin: 3rem;
-        }
-
         .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
             font-size: 12px;
             color: #4e5d78;
@@ -77,7 +73,7 @@ $get_ip_address = getIP();
 
 <div class="container my-5">
     <section>
-        <div class="container bg-dark py-5  mb-4">
+        <div class="container bg-dark py-5  mb-4" style="overflow-x: auto">
             <form action="" method="POST">
                 <?php
                 if (isset($_POST["post-help-number"])) {
