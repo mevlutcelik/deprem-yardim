@@ -55,7 +55,7 @@ date_default_timezone_set("Europe/Istanbul");
 
                         try {
 
-                            $baglanti = new PDO("mysql:host=31.186.11.173;dbname=mev16tcelikcom_", "depremyardim", "4Xz1^y2c0");
+                            $baglanti = new PDO("mysql:host=localhost;dbname=depremyardim_me", "depremyardim_me", "AxgjT7Kz4Mbg");
                             $baglanti->exec("SET NAMES utf8");
                             $baglanti->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

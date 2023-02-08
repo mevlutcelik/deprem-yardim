@@ -57,7 +57,7 @@ $get_ip_address = getIP();
 
                     try {
 
-                        $baglanti = new PDO("mysql:host=31.186.11.173;dbname=mev16tcelikcom_", "depremyardim", "4Xz1^y2c0");
+                        $db = new PDO("mysql:host=localhost;dbname=depremyardim_me", "depremyardim_me", "AxgjT7Kz4Mbg");
                         $db->exec("SET NAMES utf8");
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
