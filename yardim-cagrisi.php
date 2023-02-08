@@ -112,7 +112,7 @@ $get_ip_address = getIP();
                     <input type="text"
                            class="form-control bg-dark text-white <?= isset($is_invalid) && $is_invalid === true ? "is-invalid" : null ?>"
                            name="telephone" id="exampleInputEmail1" aria-describedby="emailHelp"
-                           placeholder="İletişim Numarası" required>
+                           placeholder="İletişim Numarası">
                 </div>
                 <div class="form-group mb-4">
                     <label for="exampleFormControlTextarea1">Adres</label>
