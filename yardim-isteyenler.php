@@ -18,6 +18,10 @@ date_default_timezone_set("Europe/Istanbul");
         #myTable_wrapper{
             margin:3rem;
         }
+        .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate{
+            font-size: 12px;
+            color: #4e5d78;
+        }
     </style>
 </head>
 
@@ -59,7 +63,7 @@ date_default_timezone_set("Europe/Istanbul");
                             $sorgu->execute();
 
 
-                            while ($cikti = $sorgu->fetch(PDO::FETCH_OBJ)) {
+                            /*while ($cikti = $sorgu->fetch(PDO::FETCH_OBJ)) {
 
 
                                 ?>
@@ -73,7 +77,7 @@ date_default_timezone_set("Europe/Istanbul");
                                 <?php
 
 
-                            }
+                            }*/
 
                         } catch (PDOException $e) {
                             die($e->getMessage());
@@ -99,7 +103,23 @@ date_default_timezone_set("Europe/Istanbul");
 <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready( function () {
-        $('#myTable').DataTable();
+        $('#myTable').DataTable({
+            language: {
+                searchPlaceholder: "Kayıt ara...",
+                emptyTable: "Tabloda henüz veri yok",
+                info: "_TOTAL_ kayıttan _START_ ile _END_ aralığı gösteriliyor.",
+                infoEmpty: "",
+                lengthMenu: "Sayfada _MENU_ kayıt göster",
+                loadingRecords: "Yükleniyor...",
+                search: "Kayıt ara...",
+                paginate: {
+                    first:      "İlk",
+                    last:       "Son",
+                    next:       "Sonraki",
+                    previous:   "Önceki"
+                },
+            }
+        });
     } );
 </script>
 </body>
