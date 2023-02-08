@@ -45,6 +45,7 @@ $get_ip_address = getIP();
             if (isset($_POST["post-yardim-cagir"])) {
                 $name = trim(filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING));
                 $surname = trim(filter_input(INPUT_POST, 'surname', FILTER_SANITIZE_STRING));
+                $telephone = trim(filter_input(INPUT_POST, 'telephone', FILTER_SANITIZE_STRING));
                 $address = trim(filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING));
                 if (empty($name) || empty($surname) || empty($address)) {
                     $is_invalid = true;
@@ -61,12 +62,13 @@ $get_ip_address = getIP();
                         $db->exec("SET NAMES utf8");
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                        $ekle = $db->prepare("INSERT INTO yardim_cagrisi SET time=?,date_mc=?, user_name=?, user_surname=?, address=?, ip_address=?");
+                        $ekle = $db->prepare("INSERT INTO yardim_cagrisi SET time=?,date_mc=?, user_name=?, user_surname=?, telephone=?, address=?, ip_address=?");
                         $insert = $ekle->execute([
                             $time,
                             $date_mc,
                             $name,
                             $surname,
+                            $telephone,
                             $address,
                             $get_ip_address
                         ]);
@@ -106,6 +108,13 @@ $get_ip_address = getIP();
                            placeholder="Soyad" required>
                 </div>
                 <div class="form-group mb-4">
+                    <label for="exampleInputEmail1">İletişim Numarası</label>
+                    <input type="text"
+                           class="form-control bg-dark text-white <?= isset($is_invalid) && $is_invalid === true ? "is-invalid" : null ?>"
+                           name="telephone" id="exampleInputEmail1" aria-describedby="emailHelp"
+                           placeholder="İletişim Numarası" required>
+                </div>
+                <div class="form-group mb-4">
                     <label for="exampleFormControlTextarea1">Adres</label>
                     <textarea
                             class="form-control bg-dark text-white <?= isset($is_invalid) && $is_invalid === true ? "is-invalid" : null ?>"
@@ -121,6 +130,11 @@ $get_ip_address = getIP();
     <?php require __DIR__ . "/components/footer.php" ?>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bold-and-dark.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <script>
+        $('input[name="telephone"]').inputmask("(999) 999 99 99");
+    </script>
     </body>
 
     </html>

@@ -46,6 +46,7 @@ date_default_timezone_set("Europe/Istanbul");
                             <th scope="col">#</th>
                             <th scope="col">Ad</th>
                             <th scope="col">Soyad</th>
+                            <th scope="col">İletişim Numarası</th>
                             <th scope="col">Adres</th>
                             <th scope="col">Tarih</th>
                         </tr>
@@ -59,7 +60,7 @@ date_default_timezone_set("Europe/Istanbul");
                             $baglanti->exec("SET NAMES utf8");
                             $baglanti->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                            $sorgu = $baglanti->prepare("SELECT * FROM yardim_cagrisi LIMIT 10");
+                            $sorgu = $baglanti->prepare("SELECT * FROM yardim_cagrisi");
                             $sorgu->execute();
 
 
@@ -71,6 +72,7 @@ date_default_timezone_set("Europe/Istanbul");
                                     <th scope="row"><?= $cikti->id ?></th>
                                     <td><?= $cikti->user_name ?></td>
                                     <td><?= $cikti->user_surname ?></td>
+                                    <td><?= $cikti->telephone ?></td>
                                     <td><?= $cikti->address ?></td>
                                     <td><?= $cikti->date_mc ?></td>
                                 </tr>
