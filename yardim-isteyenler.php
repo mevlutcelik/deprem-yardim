@@ -49,7 +49,7 @@ date_default_timezone_set("Europe/Istanbul");
 <div class="container my-5">
     <section>
         <div class="container bg-dark py-5" style="overflow-x: auto;">
-            <div style="font-size: 13px;color: #dde1ac;background: #2c2e13;padding: 0.5rem 1rem;text-align: left;border-radius: 0.5rem;border: 1px solid #4e5226;" class="mb-3">Uyarı: Telefon numarası girilmeyen kayıtlar silinmektedir. Sistemde güvenlik gereği IP adresiniz kayıt altına alınmaktadır. Lütfen sadece doğru bilgi giriniz.</div>
+            <div style="font-size: 13px;color: #dde1ac;background: #2c2e13;padding: 0.5rem 1rem;text-align: left;border-radius: 0.5rem;border: 1px solid #4e5226;" class="mb-5"><strong>Uyarı:</strong> Telefon numarası girilmeyen veya adresi düzgün girilmeyen kayıtlar silinmektedir. Sistemde güvenlik gereği IP adresiniz kayıt altına alınmaktadır. Lütfen sadece doğru bilgi giriniz.</div>
             <div class="row">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
                     <h2 class="fw-bold text-success mb-2">Enkaz Altında Kalan Kişilerin Konumları</h2>
@@ -60,7 +60,7 @@ date_default_timezone_set("Europe/Istanbul");
                     <table class="table" id="myTable">
                         <thead>
                         <tr>
-                            <th scope="col">#</th>
+<!--                            <th scope="col">#</th>-->
                             <th scope="col">Ad</th>
                             <th scope="col">Soyad</th>
                             <th scope="col">İletişim Numarası</th>
@@ -80,13 +80,14 @@ date_default_timezone_set("Europe/Istanbul");
                             $sorgu = $baglanti->prepare("SELECT * FROM yardim_cagrisi");
                             $sorgu->execute();
 
+//                            $num_id = 0;
 
                             while ($cikti = $sorgu->fetch(PDO::FETCH_OBJ)) {
 
 
                                 ?>
                                 <tr>
-                                    <th scope="row"><?= $cikti->id ?></th>
+<!--                                    <th scope="row">--><?//= ++$num_id ?><!--</th>-->
                                     <td><?= $cikti->user_name ?></td>
                                     <td><?= $cikti->user_surname ?></td>
                                     <td><?= $cikti->telephone ?></td>
@@ -123,6 +124,7 @@ date_default_timezone_set("Europe/Istanbul");
 <script>
     $(document).ready( function () {
         $('#myTable').DataTable({
+            order: [[4, 'desc']],
             language: {
                 searchPlaceholder: "Kayıt ara...",
                 emptyTable: "Tabloda henüz veri yok",
