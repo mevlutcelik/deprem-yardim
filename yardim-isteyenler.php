@@ -49,10 +49,10 @@ date_default_timezone_set("Europe/Istanbul");
 <div class="container my-5">
     <section>
         <div class="container bg-dark py-5" style="overflow-x: auto;">
+            <div style="font-size: 13px;color: #dde1ac;background: #2c2e13;padding: 0.5rem 1rem;text-align: left;border-radius: 0.5rem;border: 1px solid #4e5226;" class="mb-3">Uyarı: Telefon numarası girilmeyen kayıtlar silinmektedir. Sistemde güvenlik gereği IP adresiniz kayıt altına alınmaktadır. Lütfen sadece doğru bilgi giriniz.</div>
             <div class="row">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
                     <h2 class="fw-bold text-success mb-2">Enkaz Altında Kalan Kişilerin Konumları</h2>
-                    <small class="mb-5">Telefon numarası girilmeyen kayıtlar silinmektedir. Sistemde güvenlik gereği IP adresiniz kayıt altına alınmaktadır. Lütfen sadece doğru bilgi giriniz.</small>
                 </div>
             </div>
 
