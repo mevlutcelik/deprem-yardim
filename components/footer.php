@@ -3,7 +3,6 @@ if(!isset($domain)){
     $domain = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER["HTTP_HOST"];
 }
 ?>
-?>
 <footer class="bg-dark">
     <div class="container py-4 py-lg-5">
         <div class="row justify-content-center justify-content-md-start">
