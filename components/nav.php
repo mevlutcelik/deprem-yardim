@@ -7,8 +7,9 @@
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link" href="/">Ana Sayfa</a></li>
                 <li class="nav-item"><a class="nav-link" href="/yardim-isteyenler.php">Yardım İsteyenler</a></li>
-<!--                <li class="nav-item"><a class="nav-link" href="--><?//= $domain ?><!--/bagis-kurumlari.php">Bağış Kurumları</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="/numaralar.php">Acil Numaralar</a></li>
+                <li class="nav-item"><a class="nav-link" href="/numaralar.php">Yardım etmek isteyenler</a></li>
+                <li class="nav-item"><a class="nav-link" href="/kurtulanlar.html">Kurtulanlar</a></li>
+                <li class="nav-item"><a class="nav-link" href="/hastanedekiler-mersin.php">Mersin'deki Yaralılar</a></li>
             </ul>
             <a class="btn btn-primary shadow" role="button" href="/yardim-cagrisi.php">Yardım çağır</a>
         </div>
