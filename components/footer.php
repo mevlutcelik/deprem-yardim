@@ -1,13 +1,19 @@
+<?php
+if(!isset($domain)){
+    $domain = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER["HTTP_HOST"];
+}
+?>
+?>
 <footer class="bg-dark">
     <div class="container py-4 py-lg-5">
         <div class="row justify-content-center justify-content-md-start">
             <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
                 <h3 class="fs-6 fw-bold">Sayfalar</h3>
                 <ul class="list-unstyled">
-                    <li><a href="#">Anasayfa</a></li>
-                    <li><a href="#">Yardım İsteyenler</a></li>
-                    <li><a href="#">Bağış Kurumları</a></li>
-                    <li><a href="#">Acil Numaralar</a></li>
+                    <li><a href="<?= $domain ?>">Anasayfa</a></li>
+                    <li><a href="<?= $domain ?>/yardim-isteyenler.php">Yardım İsteyenler</a></li>
+<!--                    <li><a href="#">Bağış Kurumları</a></li>-->
+<!--                    <li><a href="#">Acil Numaralar</a></li>-->
                 </ul>
             </div>
             <!--                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">-->

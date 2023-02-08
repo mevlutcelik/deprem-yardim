@@ -1,5 +1,5 @@
 <?php
-$domain = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER["HTTP_HOST"] . "/deprem-yardim";
+$domain = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER["HTTP_HOST"];
 $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
 date_default_timezone_set("Europe/Istanbul");
 $time = time();
@@ -57,7 +57,7 @@ $get_ip_address = getIP();
 
                     try {
 
-                        $db = new PDO("mysql:host=localhost;dbname=deprem_yardim", "root", "");
+                        $baglanti = new PDO("mysql:host=31.186.11.173;dbname=mev16tcelikcom_", "depremyardim", "4Xz1^y2c0");
                         $db->exec("SET NAMES utf8");
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
