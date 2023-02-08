@@ -10,6 +10,7 @@
                 <li class="nav-item"><a class="nav-link" href="/numaralar.php">Yardım etmek isteyenler</a></li>
                 <li class="nav-item"><a class="nav-link" href="/kurtulanlar.html">Kurtulanlar</a></li>
                 <li class="nav-item"><a class="nav-link" href="/hastanedekiler-mersin.php">Mersin'deki Yaralılar</a></li>
+                <li class="nav-item"><a class="nav-link" href="/hastanedekiler-ankara.php">Ankara'daki Yaralılar</a></li>
             </ul>
             <a class="btn btn-primary shadow" role="button" href="/yardim-cagrisi.php">Yardım çağır</a>
         </div>
