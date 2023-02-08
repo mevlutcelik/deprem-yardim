@@ -52,7 +52,7 @@ date_default_timezone_set("Europe/Istanbul");
             <div class="row">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
                     <h2 class="fw-bold text-success mb-2">Enkaz Altında Kalan Kişilerin Konumları</h2>
-
+                    <small class="mb-5">Telefon numarası girilmeyen kayıtlar silinmektedir. Sistemde güvenlik gereği IP adresiniz kayıt altına alınmaktadır. Lütfen sadece doğru bilgi giriniz.</small>
                 </div>
             </div>
 
