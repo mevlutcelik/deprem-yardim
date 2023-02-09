@@ -72,8 +72,7 @@ date_default_timezone_set("Europe/Istanbul");
 <script>
     $(document).ready(function () {
 
-        let dataSet = `
-    KİMLİKSİZ ŞAHIS
+        let dataSet = `KİMLİKSİZ ŞAHIS
 "DİLARA ERBAŞ
 HAMO COŞKUN"
 KİMLİKSİZ ŞAHIS
@@ -161,8 +160,7 @@ HİKMET TAŞKIN
 PERİHAN TUNÇ
 DÜRDANE ARSLAN
 KEVSER ŞİMİR
-RABİA BİLGİÇ
-`;
+RABİA BİLGİÇ`;
         dataSet = dataSet.split("\n");
         dataSet = dataSet.map((item) => [item]);
         $('#example').DataTable({
