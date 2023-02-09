@@ -72,8 +72,7 @@ date_default_timezone_set("Europe/Istanbul");
 <script>
     $(document).ready(function () {
 
-        let dataSet = `
-    1- Selma ALEV (Hatay) 50 yaş, sol kol kesilebilir, HT VAR.
+        let dataSet = `1- Selma ALEV (Hatay) 50 yaş, sol kol kesilebilir, HT VAR.
     2- Gönül KARTAL (Hatay) 47 yaş, boyunda ağrı, ht yok.
     3- Zeynep YÜKSEK (K.Maraş) 75 yaş, sağ ayak kırık, ht yok.
     4- İsa ÇULHACI (Hatay) 51 yaş, göğüs ağrısı, ht yok.
